@@ -1,9 +1,12 @@
 .PHONY: all clean
 
-all: test_c
+all: main
 
-test_c: test_c.c
-	gcc -Wall -g -o test_c test_c.c
+main: main.c
+	gcc -Wall -g -o main main.c
 
 clean:
-	rm -f test_c
+	rm -f main
+
+run:
+	./main
